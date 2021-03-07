@@ -65,6 +65,8 @@ services:
       - 1337:1337
     links:
       - kong:kong
+    networks:
+      - kong-net
     container_name: konga
     environment:
       - NODE_ENV=production
